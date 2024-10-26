@@ -107,13 +107,10 @@ def step_2(extracted_criteria):
     the format can be as follows:
     Total number of flats in dataset: <count>
     Count of flats that met the criteria: <count>
-    
     Average resale price: <average price>
-
     25th percentile: <price>
     Median (50th percentile): <price>
     75th percentile: <price>
-
     Lowest resale price: <price>
     Maximum resale price: <price>
 
