@@ -1,4 +1,4 @@
-virtualenv
+streamlib
 langchain
 langchain_experimental
 langchain_openai
