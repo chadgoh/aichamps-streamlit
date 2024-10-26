@@ -2,3 +2,4 @@ langchain
 langchain_experimental
 langchain_openai
 openai
+tabulate
