@@ -92,7 +92,7 @@ Include:
 2. Flat type
 3. Budget 
 4. Storey (which level)
-> Example:  I would like to buy a 4 room flat above on the 3rd floor in the town of geylang. Budget is unlimited.
+> Example:  I would like to buy a 4 room flat on the 3rd floor in the town of geylang. Budget is unlimited.
 """
 
 def step_2(extracted_criteria):
