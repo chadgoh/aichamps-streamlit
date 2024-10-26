@@ -1,15 +1,18 @@
 import streamlit as st
-import os
 from langchain.agents.agent_types import AgentType
 from langchain_experimental.agents.agent_toolkits import create_csv_agent
 from langchain_openai import ChatOpenAI, OpenAI
 from dotenv import load_dotenv  
 from openai import OpenAI
+from utility import check_password
+
+
 
 
 load_dotenv()  
 st.title('HDB Resale Estimator (2020 onwards)')  
-
+if not check_password():
+    st.stop()
 with st.expander("Important notice"):
     st.write('''
        IMPORTANT NOTICE: This web application is a prototype developed for educational purposes only. The information provided here is NOT intended for real-world usage and should not be relied upon for making any decisions, especially those related to financial, legal, or healthcare matters.
