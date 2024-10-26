@@ -1,5 +1,5 @@
-langchain.agents.agent_types
-langchain_experimental.agents.agent_toolkits
+langchain
+langchain_experimental
 langchain_openai
 dotenv
 openai
