@@ -116,9 +116,8 @@ def step_2(extracted_criteria):
     Maximum resale price: <price>
 
     If the action is "buy", tell them the expected price they can expect to pay for each flat model.
-    If the action is "sell", tell recommend a price that they can sell.
+    If the action is "sell", recommend a price that they can sell at.
 
-    Include a table with the flats used inclusive of all columns in the data set here. Please do not truncate the values. 
     <criteria>
     {extracted_criteria}
     </criteria>
