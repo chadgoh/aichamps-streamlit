@@ -1,5 +1,5 @@
 distribute
-dotenv
+python-dotenv
 langchain
 langchain_experimental
 langchain_openai
