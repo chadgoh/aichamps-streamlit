@@ -115,8 +115,8 @@ def step_2(extracted_criteria):
     Lowest resale price: <price>
     Maximum resale price: <price>
 
-    If the user is looking to buy, tell them the expected price they can expect to pay for each flat model.
-    If the user is looking to sell, tell recommend a price that they can sell.
+    If the action is "buy", tell them the expected price they can expect to pay for each flat model.
+    If the action is "sell", tell recommend a price that they can sell.
 
     Include a table with the flats used inclusive of all columns in the data set here. Please do not truncate the values. 
     <criteria>
