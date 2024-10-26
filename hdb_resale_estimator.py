@@ -19,13 +19,13 @@ with st.expander("Important notice"):
         Always consult with qualified professionals for accurate and personalized advice.
     ''')
 
-if os.getenv("OPENAI_API_KEY") is None or os.getenv("OPENAI_API_KEY") == "":
+if st.secrets["OPENAI_API_KEY"] is None or st.secrets["OPENAI_API_KEY"] == "":
     print("OPENAI_API_KEY is not set")
     exit(1)
 else:
     print("OPENAI_API_KEY is set")
 
-client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
+client = OpenAI(api_key=st.secrets['OPENAI_API_KEY'])
 
 agent = create_csv_agent(
     ChatOpenAI(temperature=0, model="gpt-4o-mini"),
@@ -89,7 +89,7 @@ Include:
 2. Flat type
 3. Budget 
 4. Storey (which level)
-> Example: I would like to buy a 5 room flat above the 1st floor in the town of geylang. Budget is unlimited.
+> Example:  I would like to buy a 4 room flat above on the 3rd floor in the town of geylang. Budget is unlimited.
 """
 
 def step_2(extracted_criteria):
@@ -97,21 +97,25 @@ def step_2(extracted_criteria):
     Based on the criteria below, 
     - for budget, anything resale_price below the specified budget is acceptable.
     - for storey, if the value is within the storey_range is acceptable.
+    Do not create a mock dataset.
+    Using the dataset and assuming 'df' is the dataframe provided and already loaded in the environment:
+    Return the following data for the users to make a more informed decision on selling or buying a flat which matches their criteria.
     
-    Using the dataset, make the following calculations for sales after 2020 only:
-    - if the action is "buy", give the user some statistics of what they can expect to pay for the for the preferences given
-    - if the action is "sell", look for sales within the last 12 months,and give the user some statistics of recently sold flats 
     the format can be as follows:
+    Total number of flats in dataset: <count>
     Count of flats that met the criteria: <count>
     Average resale price: <average price>
-    Standard deviation: <standard deviation>
     Minimum resale price: <price>
     25th percentile: <price>
     Median (50th percentile): <price>
     75th percentile: <price>
+    Lowest resale price: <price>
     Maximum resale price: <price>
 
-    Include a table with the flats used inclusive of all columns in the data set here
+    If the user is looking to buy, tell them the expected price they can expect to pay for each flat model.
+    If the user is looking to sell, tell recommend a price that they can sell.
+
+    Include a table with the flats used inclusive of all columns in the data set here. Please do not truncate the values. 
     <criteria>
     {extracted_criteria}
     </criteria>
