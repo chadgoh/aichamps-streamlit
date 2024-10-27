@@ -49,21 +49,17 @@ text_splitter = RecursiveCharacterTextSplitter(
 FOLDER_PATH = "./data"
 
 # Iterate through all files in the specified folder
-@st.cache_data
-def load_data():
-    for file_name in os.listdir(FOLDER_PATH):
-        if file_name.endswith(".pdf"):  # Check if the file is a PDF
-            file_path = os.path.join(FOLDER_PATH, file_name)
-            
-            # Load and split the document
-            loader = PyPDFLoader(file_path)
-            doc_chunks = loader.load_and_split(text_splitter)
-            
-            # Add the document chunks to the merged document
-            merged_doc.extend(doc_chunks)
+for file_name in os.listdir(FOLDER_PATH):
+    if file_name.endswith(".pdf"):  # Check if the file is a PDF
+        file_path = os.path.join(FOLDER_PATH, file_name)
+        
+        # Load and split the document
+        loader = PyPDFLoader(file_path)
+        doc_chunks = loader.load_and_split(text_splitter)
+        
+        # Add the document chunks to the merged document
+        merged_doc.extend(doc_chunks)
 
-
-load_data()
 
 embeddings_model = OpenAIEmbeddings(model='text-embedding-3-small')
 vector_store = Chroma.from_documents(
