@@ -29,7 +29,7 @@ The goal of this project is to help both buyer and sellers in the HDB resale mar
 
 
 ## Objectives
-1. An AI chatbot that consolidates essential data from HDB's website, gathering information on eligibility criteria, policies, financing options, and other key resources to provide users with a comprehensive and easily accessible platform for housing information.
+1. An AI chatbot that consolidates essential data for resale flats from HDB's website, gathering information on eligibility criteria, policies, financing options, and other key resources to provide users with a comprehensive and easily accessible platform for resale housing information.
 
 2. Another AI helper that uses historical data (2020 onwards) to help buyers or sellers better understand what price they can sell/buy their flat with some given criteria (town, storey, budget, flat type) 
 
@@ -44,7 +44,7 @@ All data sources are publicly available.
 
 ## Features
 #### Resale ChatBot
-- Users do not need to thrawl through all the HDB pages to look for the data that they want
+- Users do not need to trawl through all the HDB pages to look for the data that they want
 - step-by-step guide for purchasing a resale HDB
 - Document Assistance and Checklists
     - Offers checklists and documents for each stage of the buying/selling process.
