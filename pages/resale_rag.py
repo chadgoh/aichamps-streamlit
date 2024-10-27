@@ -1,4 +1,7 @@
 import streamlit as st
+__import__('pysqlite3')
+import sys
+
 import os
 from langchain_community.document_loaders import PyPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
@@ -12,6 +15,7 @@ from langchain.prompts import PromptTemplate
 
 # if not check_password():
 #     st.stop()
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 with st.expander("Important notice"):
     st.write('''
        IMPORTANT NOTICE: This web application is a prototype developed for educational purposes only. The information provided here is NOT intended for real-world usage and should not be relied upon for making any decisions, especially those related to financial, legal, or healthcare matters.
