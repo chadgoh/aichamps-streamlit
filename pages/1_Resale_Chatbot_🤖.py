@@ -30,7 +30,7 @@ with st.expander("Important notice"):
     ''')
 
 st.write("""
-## Try asking me something about the HDB resale process(e.g. timeline, milestones, documents required etc.)
+Try asking me something about the HDB resale process(e.g. timeline, milestones, documents required etc.)
          """)
 
 if st.secrets["OPENAI_API_KEY"] is None or st.secrets["OPENAI_API_KEY"] == "":
