@@ -47,7 +47,7 @@ All data sources are publicly available.
 - Users do not need to thrawl through all the HDB pages to look for the data that they want
 - step-by-step guide for purchasing a resale HDB
 - Document Assistance and Checklists
-    - Offers checklists and links to necessary forms and documents for each stage of the buying/selling process.
+    - Offers checklists and documents for each stage of the buying/selling process.
 - Users can understand the estimated timelines and milestones in the process.
 
 ### HDB Resale estimator
