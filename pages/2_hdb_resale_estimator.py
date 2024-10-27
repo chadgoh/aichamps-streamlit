@@ -81,7 +81,6 @@ def step_1(original_prompt):
     return response
 
 
-@st.cache_data
 with st.expander("Towns and flat types"):
     st.write(agent("Give me two separate lists of the available values for the columns town and flat_type").get("output"))
 """
