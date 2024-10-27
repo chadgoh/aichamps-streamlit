@@ -11,10 +11,10 @@ from langchain.chains import RetrievalQA
 from langchain.vectorstores import Chroma
 from langchain.prompts import PromptTemplate
 
-# from utility import check_password
+from utility import check_password
 
-# if not check_password():
-#     st.stop()
+if not check_password():
+    st.stop()
 sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 with st.expander("Important notice"):
     st.write('''
