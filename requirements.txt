@@ -9,3 +9,4 @@ unstructured[pdf]
 openai
 tabulate
 chromadb
+sqlite3>=3.35.0
