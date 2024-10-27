@@ -9,11 +9,20 @@ st.write("# Welcome to HDB Resale Helper! 👋")
 
 st.sidebar.success("Select a demo above.")
 
+with st.expander("Important notice"):
+    st.write('''
+       IMPORTANT NOTICE: This web application is a prototype developed for educational purposes only. The information provided here is NOT intended for real-world usage and should not be relied upon for making any decisions, especially those related to financial, legal, or healthcare matters.
+
+        Furthermore, please be aware that the LLM may generate inaccurate or incorrect information. You assume full responsibility for how you use any generated output.
+
+        Always consult with qualified professionals for accurate and personalized advice.
+    ''')
+
 st.markdown(
 """
-This is a HDB Resale helper 
-**👈 Select a demo from the sidebar** to see some examples
-of what they can do!
+This is a HDB Resale helper. 
+
+**👈 Select a demo from the sidebar** to see some examples of what they can do**
 
 ## Project Scope
 The goal of this project is to help both buyer and sellers in the HDB resale market via the use of:
