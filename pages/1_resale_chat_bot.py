@@ -49,6 +49,7 @@ text_splitter = RecursiveCharacterTextSplitter(
 FOLDER_PATH = "./data"
 
 # Iterate through all files in the specified folder
+@st.cache_data
 for file_name in os.listdir(FOLDER_PATH):
     if file_name.endswith(".pdf"):  # Check if the file is a PDF
         file_path = os.path.join(FOLDER_PATH, file_name)
