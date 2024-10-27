@@ -29,6 +29,10 @@ with st.expander("Important notice"):
         Always consult with qualified professionals for accurate and personalized advice.
     ''')
 
+st.write("""
+## Try asking me something about the HDB resale process(e.g. timeline, milestones, documents required etc.)
+         """)
+
 if st.secrets["OPENAI_API_KEY"] is None or st.secrets["OPENAI_API_KEY"] == "":
     print("OPENAI_API_KEY is not set")
     exit(1)
