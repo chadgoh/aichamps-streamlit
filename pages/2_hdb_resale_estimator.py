@@ -10,6 +10,10 @@ from utility import check_password
 
 
 load_dotenv()  
+st.set_page_config(
+    page_title="HDB Resale Estimator (2020 onwards)",
+    page_icon="🏠",
+)
 st.title('HDB Resale Estimator (2020 onwards)')  
 if not check_password():
     st.stop()

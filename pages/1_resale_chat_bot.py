@@ -12,7 +12,11 @@ from langchain.vectorstores import Chroma
 from langchain.prompts import PromptTemplate
 
 from utility import check_password
-
+st.set_page_config(
+    page_title="Resale Chatbot",
+    page_icon="🤖",
+)
+st.title('Resale Chatbot')  
 if not check_password():
     st.stop()
 sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
