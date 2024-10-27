@@ -13,7 +13,6 @@ from langchain.prompts import PromptTemplate
 
 from utility import check_password
 st.set_page_config(
-    title="Resale Chatbot 🤖",
     page_title="Resale Chatbot",
     page_icon="🤖",
 )

@@ -11,7 +11,6 @@ from utility import check_password
 
 load_dotenv()  
 st.set_page_config(
-    title="HDB Resale Estimator 🏠",
     page_title="HDB Resale Estimator (2020 onwards)",
     page_icon="🏠",
 )
