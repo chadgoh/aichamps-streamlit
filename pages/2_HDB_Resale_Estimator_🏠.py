@@ -88,6 +88,8 @@ def step_1(original_prompt):
 with st.expander("Towns and flat types"):
     st.write(agent("Give me two separate lists of the available values for the columns town and flat_type").get("output"))
 """
+> ℹ️ List of available flat types and towns can be found above 👆
+
 ### Instructions
 Let me know if you would like to buy or sell a hdb flat in the resale market. 
 Include:
@@ -96,6 +98,7 @@ Include:
 3. Budget 
 4. Storey (which level)
 > Example:  I would like to buy a 4 room flat on the 3rd floor in the town of geylang. Budget is unlimited.
+
 """
 
 def step_2(extracted_criteria):
@@ -119,6 +122,8 @@ def step_2(extracted_criteria):
 
     If the action is "buy", tell them the expected price they can expect to pay for each flat model.
     If the action is "sell", recommend a price that they can sell at.
+
+    Always end with a nice message.
 
     <criteria>
     {extracted_criteria}
