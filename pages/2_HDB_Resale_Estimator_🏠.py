@@ -120,10 +120,8 @@ def step_2(extracted_criteria):
     Lowest resale price: <price>
     Maximum resale price: <price>
 
-    If the action is "buy", tell them the expected price they can expect to pay for each flat model.
-    If the action is "sell", recommend a price that they can sell at.
-
-    Always end with a nice message.
+    If the action is "buy", tell them the expected price they can expect to pay for each flat model. End the message with ""Happy house hunting!"
+    If the action is "sell", recommend a price that they can sell at.  End the message with "Happy house selling!"
 
     <criteria>
     {extracted_criteria}
